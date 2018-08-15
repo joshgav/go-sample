@@ -27,7 +27,7 @@ func main() {
 
 // tester
 func tester(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello %s!", html.EscapeString(
+	fmt.Fprintf(w, "Hello %s! I made a change!", html.EscapeString(
 		r.URL.Query().Get("name")))
 	log.Printf("request received, details follow:\n%+v\n", r)
 }
